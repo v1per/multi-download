@@ -53,9 +53,7 @@ module.exports = function (urls) {
 		throw new Error('`urls` required');
 	}
 
-	if (typeof document.createElement('a').download === 'undefined') {
-		return fallback(urls);
-	}
+	return fallback(urls);
 
 	var delay = 0;
 
